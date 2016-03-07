@@ -1,41 +1,27 @@
-
+<!--
+* use ng-click to set a value on click
+* use ng-show to show or hide elements depending on an expression
+* ng-if to remove elements from the DOM
+* use ng-class to set a class
+-->
 <!DOCTYPE html>
-<html ng-app>
+<html>
   <head>
     <title>More Binding</title>
     <script src="angular.js"></script>
     <link rel="stylesheet" type="text/css" href="styles.css">
   </head>
-  <body ng-init="tab='home'" ng-class="{red: color=='red', blue: color=='blue', comic: font=='comic'}">
+  <body ng-app>
 
-    <a href="" ng-click="tab='home'">Home</a>
-    <a href="" ng-click="tab='about'">About</a>
-
-    <div>
-      <select ng-model="color">
-        <option value="">None</option>
-        <option value="red">Red</option>
-        <option value="blue">Blue</option>
-      </select>{{color}}
-
-      <select ng-model="font">
-        <option value="">None</option>
-        <option value="comic">Comic</option>
-      </select>{{font}}
-    </div>
-
+    <a href="">Home</a>
+    <a href="">About</a>
     <h1>{{tab}}</h1>
 
-    <input type='checkbox' ng-model="showKitten"/>{{showKitten}}
-    <br />
-    <img ng-show="showKitten" src="http://placekitten.com.s3.amazonaws.com/homepage-samples/408/287.jpg" />
-
-
-    <div ng-if="tab==='home'">
+    <div>
       Home content. Wooo!
     </div>
 
-    <div ng-if="tab==='about'">
+    <div>
       About content. Wooo!
     </div>
 
@@ -45,14 +31,7 @@
 
 
 
-
-
 <!--
-* use ng-click to set a value on click
-* use ng-show to show or hide elements depending on an expression
-* ng-if to remove elements from the DOM
-* use ng-class to set a class
-
 
 ng-class="{red: color=='red', blue: color=='blue', comic: font=='comic'}"
 
@@ -74,6 +53,8 @@ ng-class="{red: color=='red', blue: color=='blue', comic: font=='comic'}"
 <img src="http://placekitten.com.s3.amazonaws.com/homepage-samples/408/287.jpg" />
 
  -->
+
+
 
 <!--
 Initial State
